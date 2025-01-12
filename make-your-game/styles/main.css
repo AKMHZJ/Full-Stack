@@ -1,0 +1,39 @@
+.nav-bar{
+    display: flex;
+    column-gap: 40px;
+    border: solid 1px black;
+    width: 600px;align-items: center;
+    justify-content: center;
+}
+
+.grid{
+    width: 600px;
+    height: 600px;
+    border: solid 1px black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid div{
+    width: 30px;
+    height: 30px;
+    border: solid 1px yellow;
+    box-sizing: border-box;
+}
+
+.invader{
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+.spaceship{
+    background-color: brown;
+}
+
+.fire{
+    background-color: orangered;
+}
+
+.explosion{
+    background-color: red;
+}
