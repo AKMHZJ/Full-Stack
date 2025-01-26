@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>real-time-forum</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <img src="../src/images/logo.png" alt="logo" class="logo" />
+      </div>
+      <div class="nav-right">
+        <div class="search-box">
+          <img src="../src/images/search.png" alt="search-icon" />
+          <input type="text" placeholder="Search" />
+        </div>
+        <div class="nav-user-icon online">
+          <img src="../src/images/Unknown_person.jpg" alt="profile" />
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- left-sidebar ----------------- -->
+      <div class="left-sidebar">
+        <div class="imp-links">
+          <ul>
+            <li onclick="filterPosts('getcreatedposts')">created posts</li>
+            <li onclick="filterPosts('getlikedposts')">liked posts</li>
+          </ul>
+        </div>
+        <div class="shortcut-links">
+          <p>Filter</p>
+          <ul class="dropdown-menu">
+            <li>
+              <input
+                type="checkbox"
+                id="tech"
+                name="categories"
+                value="Technology"
+              />
+              <label for="tech">Technology</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sp" name="categories" value="Sport" />
+              <label for="sp">Sport</label>
+            </li>
+            <li>
+              <input type="checkbox" id="he" name="categories" value="Health" />
+              <label for="he">Health</label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="li"
+                name="categories"
+                value="Lifestyle"
+              />
+              <label for="li">Lifestyle</label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="ed"
+                name="categories"
+                value="Education"
+              />
+              <label for="ed">Education</label>
+            </li>
+            <button
+              onclick="filterPosts('filterbycategories')"
+              class="sbtf"
+              type="submit"
+            >
+              filter
+            </button>
+          </ul>
+        </div>
+      </div>
+
+      <!-- main-content ----------------- -->
+      <div class="main-content">
+        <div class="write-post">
+          <div class="user-profile">
+            <img src="../src/images/Unknown_person.jpg" alt="profile" />
+            <div>
+              <p>Jhon</p>
+              <small>Public <i class="fas fa-caret-down"></i></small>
+            </div>
+          </div>
+          <div class="post-input">
+            <textarea
+              rows="3"
+              placeholder="what's on your mind, username"
+            ></textarea>
+            <button class="posting">post</button>
+          </div>
+        </div>
+        <div>posts</div>
+      </div>
+
+      <!-- right-sidebar ----------------- -->
+      <div class="right-sidebar">
+        <h4>Contacts</h4>
+        <div class="online-list">
+          <div class="online">
+            <img src="../src/images/Unknown_person.jpg" alt="profile" />
+          </div>
+          <p>brain</p>
+        </div>
+        <div class="online-list">
+          <div class="online">
+            <img src="../src/images/Unknown_person.jpg" alt="profile" />
+          </div>
+          <p>anna</p>
+        </div>
+        <div class="online-list">
+          <div class="online">
+            <img src="../src/images/Unknown_person.jpg" alt="profile" />
+          </div>
+          <p>zack</p>
+        </div>
+
+        <div class="sidebar-title">
+          <h4>Conversation</h4>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
