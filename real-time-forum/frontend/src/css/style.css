@@ -3,15 +3,31 @@
     padding: 0;
 }
 
+
+:root{
+    --body-color: #efefef;
+    --nav-color: #471fa3fd;
+    --bg-color: #fff;
+}
+
+.dark{
+    --body-color: #0a0a0a;
+    --nav-color: #000;
+    --bg-color: #000;
+}
+
+
+
 body{
-    background: #efefef;
+    background: var(--body-color);
+    transition: background 0.3s;
 }
 
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #1876f2;
+    background: var(--nav-color);
     padding: 5px 5%;
     position: sticky;
     top: 0;
@@ -95,7 +111,11 @@ nav{
     flex-basis: 25%;
     position: sticky;
     top: 70px;
+    background: var(--bg-color);
     align-self: flex-start;
+    padding: 20px;
+    border-radius: 4px;
+    color: #626262;
     /* height: 100vh; */
 }
 
@@ -151,7 +171,7 @@ nav{
   
 
   .shortcut-links ul input[type="checkbox"]:checked+label {
-    background-color: #0af;
+    background-color: #512da8;
     color: white;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   }
@@ -161,7 +181,7 @@ nav{
   width: 100%;
   padding: 0.75rem;
   border-radius: 25px;
-  background-color: #0056b3;
+  background-color: #512da8;
   color: #fff;
   font-size: 16px;
   font-weight: bold;
@@ -171,7 +191,7 @@ nav{
 }
 
 .shortcut-links ul .sbtf:hover {
-  background-color: #0d4764;
+  background-color: #25066d;
 }
 
 
@@ -220,7 +240,7 @@ nav{
 
 .write-post{
     width: 100%;
-    background: #fff;
+    background: var(--bg-color);;
     border-radius: 6px;
     padding-bottom: 20px;
     color:#626262;
@@ -259,4 +279,68 @@ nav{
     border-bottom: 1px solid #ccc;
     background: transparent;
     resize: none;
+}
+
+.footer{
+    text-align: center;
+    color: #9a9a9a;
+    padding: 10px 0 20px;
+    font-size: 13px;
+}
+
+.settings-menu{
+    position: absolute;
+    width: 90%;
+    max-width: 350px;
+    height: 500px;
+    background: var(--bg-color);;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    overflow: hidden;
+    top: 108%;
+    right: 5%;
+    max-height: 0;
+    transition: max-height 0.3s ;
+}
+
+.settings-menu-height{
+    max-height: 450px;
+}
+
+
+.setting-menu-inner{
+    padding: 20px;
+}
+
+.settings-menu hr{
+    border: 0;
+    height: 1px;
+    background: #9a9a9a;
+    margin: 15px 0;
+}
+
+#dark-theme{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ccc;
+    width: 45px;
+    border-radius: 15px;
+    padding: 2px 3px;
+    cursor: pointer;
+    display: flex;
+    transition: padding-left 0.5s, background 0.5s;
+}
+
+#dark-theme span{
+    width: 18px;
+    height: 18px;
+    background: var(--bg-color);;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#dark-theme.dark-on{
+    padding-left: 23px;
+    background: #fff;
 }

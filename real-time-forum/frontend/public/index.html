@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../src/css/style.css" />
+    <!-- <link rel="stylesheet" href="../src/css/web.css"> -->
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -20,8 +22,30 @@
           <img src="../src/images/search.png" alt="search-icon" />
           <input type="text" placeholder="Search" />
         </div>
-        <div class="nav-user-icon online">
+        <div class="nav-user-icon online" onclick="settingsMenuToggle()">
           <img src="../src/images/Unknown_person.jpg" alt="profile" />
+        </div>
+      </div>
+      <!-- settings-menu -->
+      <div class="settings-menu">
+        <div class="setting-menu-inner">
+          <div class="user-profile">
+            <img src="../src/images/Unknown_person.jpg" alt="profile" />
+            <div>
+              <p>Jhon</p>
+              <small>Public <i class="fas fa-caret-down"></i></small>
+            </div>
+          </div>
+          <hr>
+          <div id="dark-theme">
+            <!-- <p>theme</p> -->
+            <span></span>
+          </div>
+          <hr>
+          <div class="logout">
+            <p>logout</p>
+          </div>
+          <hr>
         </div>
       </div>
     </nav>
@@ -129,8 +153,35 @@
 
         <div class="sidebar-title">
           <h4>Conversation</h4>
+          <div class="online-list">
+            <div class="online">
+              <img src="../src/images/Unknown_person.jpg" alt="profile" />
+            </div>
+            <p>brain</p>
+          </div>
+          <div class="online-list">
+            <div class="online">
+              <img src="../src/images/Unknown_person.jpg" alt="profile" />
+            </div>
+            <p>zack</p>
+          </div>
+          <div class="online-list">
+            <div class="online">
+              <img src="../src/images/Unknown_person.jpg" alt="profile" />
+            </div>
+            <p>anna</p>
+          </div>
         </div>
       </div>
     </div>
+    <footer>
+      <div class="footer">
+        <p>Copyright 2025 - For Real Time Forum</p>
+      </div>
+    </footer>
+    <script src="../src/js/script.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="../src/js/websocket.js"></script>
+    <script src="../src/js/ui.js"></script> -->
   </body>
 </html>
